@@ -1,0 +1,123 @@
+:root {
+	--bg-color-body: #ddd;
+	--font-primary: 'Roboto', sans-serif;
+	--font-headers: 'Ubuntu', sans-serif;
+}
+
+/* * {
+	background: rgba(100,100,100,.1);
+} */
+
+body {
+	background: var(--bg-color-body);
+	margin: 0;
+	padding: 5px;
+	box-sizing: border-box;
+	font-family: var(--font-primary);
+}
+
+.slider {
+	--var-width: 500px;
+	--var-height:	calc( var(--var-width) / 2 );
+	width: var(--var-width);
+	height: var(--var-height);
+	/* max-width: 1000px;
+	max-height: calc( 1000px / 2 ); */
+	margin: 20px auto 10px;
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	align-items: stretch;
+	justify-content: space-between;
+	box-shadow: 2px 3px 5px 0px #777;
+}
+
+.slider .btn {
+	flex: 1;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	justify-items: center;
+	cursor: pointer;
+	background: #fff;
+}
+
+.slider .btn.disallowed {
+	cursor: not-allowed;
+}
+
+.btn .fas {
+	/* width: 20px;
+	height: 20px; */
+	font-size: 30px;
+	color: #777;
+}
+
+.slider__photo-space {
+	height: var(--var-height);
+	flex: 8;
+	
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+
+	background: url('./photos/brett-jordan-Jz-cV0cqBXo-unsplash.jpg') center no-repeat;
+	background-size: cover;
+	
+}
+
+.slider__photo-space__header {
+	padding: 10px 10px;
+	background-color: rgba(0,0,0,.8);
+	color: #ddd;
+}
+
+.slider h1 {
+	margin: 0;
+	padding: 0;
+	font-family: var(--font-headers);
+	font-size: 1.2rem;
+}
+
+.slider p {
+	margin: 5px 0;
+	padding: 0;
+	font-size: 0.8rem;
+}
+
+
+.photos-list {
+	margin-top: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.photos-list__item {
+	margin: 10px;
+	width: 90px;
+	height: 60px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover !important;
+	cursor: pointer;
+	border: 7px solid #fff;
+	box-shadow: 2px 3px 5px 0px #777;
+}
+
+.hr-divide {
+	width: 50%;
+	margin: 17px 10px 10px auto;
+}
+
+#file-selector {
+	width: 220px;
+	float: right;
+	margin-bottom: 8px;
+}
+
+body::after {
+	content: '';
+	clear: both;
+}
